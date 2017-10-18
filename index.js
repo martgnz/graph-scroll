@@ -54,7 +54,7 @@ export function graphScroll() {
         : belowStart - containerStart) - 200;
     var progress = (pos - prevTop) / (nextTop - prevTop);
 
-    if (progress >= 0 && progress <= 1) dispatch.scroll(i, progress);
+    if (progress >= 0 && progress <= 1) dispatch.call("scroll", null, progress);
   }
 
   function resize() {
